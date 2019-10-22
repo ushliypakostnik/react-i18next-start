@@ -1,33 +1,33 @@
 // Actions Types
 
-export const ACTION_REQUEST2 = 'ACTION_REQUEST2';
-export const ACTION_SUCCESS2 = 'ACTION_SUCCESS2';
-export const ACTION_ERROR2 = 'ACTION_ERROR2';
+export const ACTION_REQUEST = 'ACTION_REQUEST';
+export const ACTION_SUCCESS = 'ACTION_SUCCESS';
+export const ACTION_ERROR = 'ACTION_ERROR';
 
 
 // Action Creators
 ////////////////////////////////////////////////////////////
 
-export const authRequest2 = () => ({
-  type: ACTION_REQUEST2,
+export const authRequest = () => ({
+  type: ACTION_REQUEST,
 });
 
-export const authSuccess2 = () => ({
-  type: ACTION_SUCCESS2,
+export const authSuccess = () => ({
+  type: ACTION_SUCCESS,
 });
 
 export const authError2 = (error) => ({
-  type: ACTION_ERROR2,
+  type: ACTION_ERROR,
   error
 });
 
 // fake async fetch
-function fetchResult2(dispatch) {
-  dispatch(authSuccess2());
+function fetchResult(dispatch) {
+  dispatch(authSuccess());
 }
-export const fetch2 = (credentials) => {
+export const fetch = (credentials) => {
   return dispatch => {
-    dispatch(authRequest2(credentials));
-    setTimeout(fetchResult2(dispatch), 100);
+    dispatch(authRequest(credentials));
+    setTimeout(fetchResult(dispatch), 100);
   }
 }

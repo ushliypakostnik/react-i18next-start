@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
 
+import { rememberLanguage } from '../utils/storage';
 import { LANGUAGES } from '../store/constants';
 import { setLanguage } from '../store/modules/utils/actions';
 
@@ -15,7 +16,7 @@ class Main extends Component {
   }
 
   static getDerivedStateFromProps = (nextProps, prevState) => ({
-    language: nextProps.isAuth,
+    language: nextProps.language,
   });
 
   componentDidMount() {
@@ -24,14 +25,17 @@ class Main extends Component {
 
   setLanguage = language => {
     this.props.setLanguage(language);
+    rememberLanguage(language);
   };
 
   render() {
-    const { t, i18n } = this.props;
+    const { t, i18n, language } = this.props;
 
-    const changeLanguage = language => {
-      i18n.changeLanguage(language);
-      this.setLanguage(language);
+    const changeLanguage = lang => {
+      if (language !== lang) {
+        i18n.changeLanguage(lang);
+        this.setLanguage(lang);
+      }
     };
 
     return (
