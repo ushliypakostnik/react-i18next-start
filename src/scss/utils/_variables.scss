@@ -1,0 +1,126 @@
+// Project variables
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+$image-path: "../../assets/";
+
+
+// Sizes
+//////////////////////////////////////////////////////
+
+// Main
+$gutter: 20px;
+
+
+// Elements
+//////////////////////////////////////////////////////
+
+// Roundings
+$border-radius_base: 4px;
+$border-radius_small: 3px;
+
+// Inputs
+$input_height: 38px;
+$input_height_small: 30px;
+
+// Buttons
+$btn_padding_horizontal_base: $gutter/ 2;
+$btn_padding_vertical_base: 8.5px;
+
+$btn_padding_horizontal_small: 4px;
+$btn_padding_vertical_small: 4px;
+
+
+// Views
+//////////////////////////////////////////////////////
+
+
+// Layouts
+//////////////////////////////////////////////////////
+
+$layout_modal: 2500;
+$layout_fixed: 2000;
+$layout_popups: 1500;
+$layout_content: 1000;
+
+
+// Colors
+//////////////////////////////////////////////////////
+
+// Palette
+
+$color_white: #fff;
+$color_black: #000;
+
+$color_primary: #21dbad;
+$color_active: #ed9415;
+
+// Grays
+
+$color_gray_lighter: #fafafa;
+
+// Text
+
+$color_text: #6c7a89;
+
+// Links
+
+$color_link: #557aa7;
+$color_link-hover: #44529c;
+
+// Borders
+
+$color_border: #dadada;
+
+// Functional
+
+$color_disabled: #777777;
+$color_placeholder: $color_disabled;
+
+
+// Effects
+//////////////////////////////////////////////////////
+
+$transition_duration: 0.2s;
+$transition_timing-function: ease-in-out;
+$transition_delay: 0s;
+
+$fade: 0.2;
+$fade-percent: 8%;
+
+
+// Breackpoints and containers
+//////////////////////////////////////////////////////
+
+// Extra small screen / XS / phone
+$breackpoint_xs:                  320px;
+$breackpoint_xs_min:              $breackpoint_xs;
+
+// Small screen / SM / tablet
+$breackpoint_sm:                  800px;
+$breackpoint_sm_min:              $breackpoint_sm;
+
+// Medium screen / MD desktop / нетбуки типо чтоле
+$breackpoint_md:                  1024px;
+$breackpoint_md_min:              $breackpoint_md;
+
+// Large screen / LG desktop / небольшие экраны - ноуты
+$breackpoint_lg:                  1600px;
+$breackpoint_lg_min:              $breackpoint_lg;
+
+$breackpoint_xs_max:              ($breackpoint_sm_min - 1);
+$breackpoint_sm_max:              ($breackpoint_md_min - 1);
+$breackpoint_md_max:              ($breackpoint_lg_min - 1);
+
+/*
+$content-container-sm: 720px;
+$content-container-md: 940px;
+$content-container-lg: 1140px;
+*/
+
+
+// Srollbar
+/* $scrollbar_width: 10px;
+$color_scrollbar_track: $color_gray_dark;
+$color_scrollbar_thumb: $color_white; */
