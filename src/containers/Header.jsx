@@ -6,7 +6,9 @@ import { rememberLanguage } from '../utils/storage';
 import { LANGUAGES } from '../store/constants';
 import { setLanguage } from '../store/modules/utils/actions';
 
-class Main extends Component {
+import '../scss/components/_header.scss';
+
+class Header extends Component {
   constructor(props) {
     super(props);
 
@@ -39,18 +41,16 @@ class Main extends Component {
     };
 
     return (
-      <div className="page-center">
-        <div className="message">
-          <h3>{ t('title') }</h3>
-          {LANGUAGES.map((language, index) => {
-            return (
-              <button
-                key={index}
-                onClick={() => changeLanguage(language.name)}
-              >{language.name}</button>
-            );
-          })}
-        </div>
+      <div className="page__header header">
+        <h3>{ t('title') }</h3>
+        {LANGUAGES.map((language, index) => {
+          return (
+            <button
+              key={index}
+              onClick={() => changeLanguage(language.name)}
+            >{language.name}</button>
+          );
+        })}
       </div>
     );
   }
@@ -64,4 +64,4 @@ const mapDispatchToProps = (dispatch) => ({
   setLanguage: (language) => dispatch(setLanguage(language)),
 });
 
-export default withTranslation()(connect(mapStateToProps, mapDispatchToProps)(Main));
+export default withTranslation()(connect(mapStateToProps, mapDispatchToProps)(Header));

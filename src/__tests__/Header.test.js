@@ -6,32 +6,32 @@ import thunk from 'redux-thunk';
 
 import { INITIAL_STATE } from '../store/constants';
 
-import Main from '../containers/main';
+import Header from '../containers/Header';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-describe('app render', () => {
+describe('Header render', () => {
   const props = {};
   const store = mockStore(INITIAL_STATE);
 
   const wrapper = mount(<Provider store={store}>
                           <MemoryRouter>
-                            <Main {...props} />
+                            <Header {...props} />
                           </MemoryRouter>
                         </Provider>);
 
-  it('app render correctly', () => {
+  it('Header render correctly', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 
-  it('app contain wrapper with class', () => {
+  it('Header contain wrapper with class', () => {
     expect(wrapper.find('.message')).toHaveLength(1);
   });
 
-  it('app componentDidMount', () => {
-    const spy = jest.spyOn(wrapper.find('Main').instance(), 'componentDidMount');
-    wrapper.find('Main').instance().componentDidMount();
+  it('Header componentDidMount', () => {
+    const spy = jest.spyOn(wrapper.find('Header').instance(), 'componentDidMount');
+    wrapper.find('Header').instance().componentDidMount();
     expect(spy).toHaveBeenCalled();
   });
 });
