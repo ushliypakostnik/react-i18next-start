@@ -1,5 +1,8 @@
-Test frontend project
-=====================
+Start frontend project
+======================
+
+Start PWA-project on React/Router/Redux with i18next and SCSS stylebase.
+
 
 Deploy
 ------
