@@ -8,7 +8,7 @@
 // Breackpoins in styles/utils/_variables.scss
 
 @mixin not-lg {
-  @media only screen and (min-width: $breackpoint_sm_max) {
+  @media only screen and (max-width: $breackpoint_md_max) {
     @content;
   }
 }
