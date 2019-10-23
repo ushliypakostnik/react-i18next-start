@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Main from '../containers/main';
-import Page404 from '../components/page404';
+import Main from '../containers/Main';
+import Page404 from '../components/Page404';
 
 const App = () => {
   return (
