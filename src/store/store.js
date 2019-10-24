@@ -1,7 +1,9 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { routerMiddleware } from 'react-router-redux';
 import { connectRouter } from 'connected-react-router';
-import { createBrowserHistory as createHistory } from 'history';
+// import { browserHistory } from "react-router";
+// import { routerMiddleware, syncHistoryWithStore, routerReducer } from 'react-router-redux';
+// import { createBrowserHistory as createHistory } from 'history';
+import { createBrowserHistory } from 'history';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
@@ -52,17 +54,21 @@ const reHydrateStore = (state) => {
   return state;
 };
 
-export const history = createHistory();
-middlewares.push(routerMiddleware(history));
+// to v3
+// export const history = syncHistoryWithStore(browserHistory, store);
 
+export const history = createBrowserHistory();
+
+// to v4
 function configureStore(state) {
   return createStore(
     combineReducers({
       rootReducer,
-      router: connectRouter(history),
+      // routing: routerReducer(history),
+      router: connectRouter(history), // to Connected Router
     }),
     reHydrateStore(state),
-    applyMiddleware(...middlewares)
+    applyMiddleware(...middlewares),
   );
 }
 
