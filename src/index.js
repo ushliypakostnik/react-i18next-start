@@ -2,7 +2,7 @@ import React, { Suspense, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 // import { ConnectedRouter } from "connected-react-router";
-import { Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import './utils/i18n';
 
@@ -21,7 +21,7 @@ ReactDOM.render((
   <Provider store={store}>
     <Suspense fallback="loading...">
       <Layout>
-        <Router history={history}>
+        <BrowserRouter>
           <Fragment>
             <Header />
             <Switch>
@@ -30,7 +30,7 @@ ReactDOM.render((
               <Route component={ Page404 } />
             </Switch>
            </Fragment>
-        </Router>
+        </BrowserRouter>
       </Layout>
     </Suspense>
   </Provider>
