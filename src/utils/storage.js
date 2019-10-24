@@ -5,13 +5,11 @@ import {
   AUTO_LANG,
 } from '../store/constants';
 
-// Auto language
-if (typeof(AUTO_LANG) !== 'undefined') {
-  Cookies.set(COOKIES.LANG.name, AUTO_LANG, { expires: COOKIES.LANG.expires });
-}
+import i18n from './i18n';
 
 export const rememberLanguage = language => {
   if (typeof(language) !== 'undefined') {
+    i18n.changeLanguage(language);
     Cookies.set(COOKIES.LANG.name, language, { expires: COOKIES.LANG.expires });
   }
 };

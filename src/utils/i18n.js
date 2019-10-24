@@ -21,7 +21,7 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    fallbackLng: LANGUAGES[0].name,
+    fallbackLng: [ LANGUAGES[1].name, LANGUAGES[0].name ],
     lng: AUTO_LANG,
 
     debug: false,

@@ -35,7 +35,6 @@ class Header extends Component {
 
     const changeLanguage = lang => {
       if (language !== lang) {
-        i18n.changeLanguage(lang);
         this.setLanguage(lang);
       }
     };

@@ -64,7 +64,7 @@ function configureStore(state) {
   return createStore(
     combineReducers({
       rootReducer,
-      // routing: routerReducer(history),
+      // routing: routerReducer(history), // to v3
       router: connectRouter(history), // to Connected Router
     }),
     reHydrateStore(state),
