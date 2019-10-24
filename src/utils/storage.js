@@ -1,9 +1,6 @@
 import Cookies from "js-cookie";
 
-import {
-  COOKIES,
-  AUTO_LANG,
-} from '../store/constants';
+import { COOKIES } from '../store/constants';
 
 import i18n from './i18n';
 
