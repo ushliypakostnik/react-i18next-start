@@ -47,17 +47,6 @@ class Layout extends Component {
     window.removeEventListener('keydown', this.onKeyDown);
   };
 
-  // Accessibility fix for tab focus on YandexMap
-  onKeyDown = (e) => {
-    let el;
-
-    if (e.keyCode === 9 && e.target.classList.contains(BEFORE_LANG_SWITCH_CLASS)) {
-      e.preventDefault();
-      el = document.getElementById(LANG_SWITCH);
-      if (el) el.focus();
-    }
-  };
-
   render() {
     const { isAcceptStorageMessage } = this.state;
 
