@@ -15,9 +15,6 @@ import Page404 from '../../views/Page404';
 
 import '../../scss/components/layout/_layout.scss';
 
-const BEFORE_LANG_SWITCH_CLASS = 'before-language-switch';
-const LANG_SWITCH = 'language-switch';
-
 class Layout extends Component {
   constructor(props) {
     super(props);
@@ -31,11 +28,6 @@ class Layout extends Component {
     isAcceptStorageMessage: nextProps.isAcceptStorageMessage,
   });
 
-  goodHeight() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
-
   componentDidMount() {
     this.goodHeight();
     window.addEventListener('resize', () => {this.goodHeight()});
@@ -45,6 +37,11 @@ class Layout extends Component {
   componentWillUnmount() {
     window.removeEventListener('resize', () => {this.goodHeight()});
     window.removeEventListener('keydown', this.onKeyDown);
+  };
+
+  goodHeight() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
   };
 
   render() {
