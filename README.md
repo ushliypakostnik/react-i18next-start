@@ -1,7 +1,7 @@
-Start frontend project
-======================
+React/SCSS/i18next start frontend project
+=========================================
 
-Start PWA-project on React/Router/Redux with i18next and SCSS stylebase.
+PWA-project on React/Router/Redux with i18next and SCSS stylebase.
 
 
 Deploy

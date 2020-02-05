@@ -66,10 +66,18 @@ p {
 
 h1 {
   @include text($font-family_sans, $font-size_large, $font-weight_sans_bold);
+
+  @include xs {
+    @include text($font-family_sans, $font-size_normal, $font-weight_sans_bold);
+  }
 }
 
 h2 {
   @include text($font-family_sans, $font-size_large, $font-weight_sans_regular);
+
+  @include xs {
+    @include text($font-family_sans, $font-size_normal, $font-weight_sans_regular);
+  }
 }
 
 h3 {

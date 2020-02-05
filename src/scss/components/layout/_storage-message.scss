@@ -1,0 +1,36 @@
+// Storage-message
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+@import "../../_stylebase.scss";
+
+.storage-message {
+  height: $storage-message_height;
+  color: $color_white;
+  background: $color_black;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: $layout_modal + 100;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    padding-right: $gutter * 2;
+    @include text($font-family_sans, 20px, $font-weight_sans_regular);
+    line-height: 23px;
+  }
+
+  .btn {
+    white-space: nowrap;
+  }
+}

@@ -1,15 +1,20 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
-import '../scss/views/_page404.scss';
+import '../scss/views/_page.scss';
 
 const Page404 = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="page--center">
-      <div className="page__message">
-        <h1>404</h1>
-        <h3>Page Not Found!!!</h3>
+    <section className="page--404">
+      <div className="container">
+        <div className="text">
+          <h1>404</h1>
+          <h2>{t('views.page404.title')}</h2>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

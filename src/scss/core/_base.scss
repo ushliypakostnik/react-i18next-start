@@ -12,7 +12,7 @@ html {
 
 body {
   height: 100%;
-  color: $color_text;
+  color: $color_black;
   background: $color_white;
   margin: 0;
   padding: 0;
@@ -30,7 +30,7 @@ body {
   @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
 
   ::selection {
-    background: fade-out($color_active, $fade * 3);
+    background: fade-out($color_second, $fade * 3);
   }
 }
 
@@ -50,6 +50,7 @@ a {
   }
 }
 
+// Sections
 
 // All blocks to border-box!!!
 main,
@@ -68,8 +69,6 @@ a {
   box-sizing: border-box;
 }
 
-
-// Sections
 main,
 article,
 aside,
@@ -83,11 +82,22 @@ pre {
   padding: 0;
 }
 
+address {
+  font-style: normal;
+}
+
 
 // Others
 fieldset,
 iframe {
   border-width: 0;
+}
+
+// Lists
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 

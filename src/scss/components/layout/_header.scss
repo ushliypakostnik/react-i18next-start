@@ -1,0 +1,27 @@
+// Header component
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+@import "../../_stylebase.scss";
+
+.header {
+  background: $color_black;
+  position: fixed;
+  top: 0;
+  z-index: $layout_fixed;
+  @include size(100%, $header_height);
+
+  .container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__right {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

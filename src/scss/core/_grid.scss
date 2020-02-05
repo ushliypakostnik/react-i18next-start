@@ -1,0 +1,24 @@
+// Grid
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+// Project Grids Mixin
+//////////////////////////////////////////////////////
+
+@mixin adaptive-grid($view) {
+  display: grid;
+
+  @if $view == "gridname" {
+    grid-template-columns: 1fr 1fr;
+    gap: 16vw;
+
+    @include sm {
+      gap: 7vw;
+    }
+
+    @include xs {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+}

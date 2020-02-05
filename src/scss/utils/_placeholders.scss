@@ -3,27 +3,28 @@
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
 
-// Бывают случаи когда нельзя примернить класс на элементе или добавить внутрь еще враппер
-%container-fluid {
-  width: 100%;
-  padding-left: $gutter;
-  padding-right: $gutter;
+%scroll-optimization {
+  transform: translate3d(0, 0, 0);
+  will-change: scroll-position;
+}
+
+%container {
+  padding-left: 10vw;
+  padding-right: 10vw;
 
   @include xs {
-    padding-left: $gutter / 2;
-    padding-right: $gutter / 2;
+    padding-left: $gutter;
+    padding-right: $gutter;
   }
 }
 
-%container-fluid--narrow {
-  width: 100%;
-  padding-left: $gutter / 2;
-  padding-right: $gutter / 2;
-
-  @include xs {
-    padding-left: $gutter / 4;
-    padding-right: $gutter / 4;
-  }
+%overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @include size(100%, 100%);
 }
 
 // Text overflow ellipsis protection
@@ -51,7 +52,7 @@
   margin-bottom: $gutter / 2;
 
   > li {
-    margin-bottom: $gutter / 4;
+    margin-bottom: round($gutter / 4);
   }
 }
 

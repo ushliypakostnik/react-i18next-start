@@ -1,0 +1,32 @@
+// Loader
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+@import "../../_stylebase.scss";
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include size(100%, 100%);
+
+  &--base {
+    @include size(100%, 400px);
+
+    .loader {
+      transform: translateY(-2vh); /* Fallback for browsers that do not support Custom Properties */
+      transform: translateY(calc(var(--vh, 1vh) * -2));
+    }
+  }
+
+  &--index {
+    @include size(100vw, 100vh); /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+
+    .loader {
+      transform: translateY(-4vh); /* Fallback for browsers that do not support Custom Properties */
+      transform: translateY(calc(var(--vh, 1vh) * -4));
+    }
+  }
+}

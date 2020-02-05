@@ -22,7 +22,7 @@ describe('Header render', () => {
                         </Provider>);
 
   /* it('Header render correctly', () => {
-    expect(toJson(wrapper)).toMatchSnapshot();
+    // expect(toJson(wrapper)).toMatchSnapshot();
   }); */
 
   it('Header contain wrapper with class', () => {

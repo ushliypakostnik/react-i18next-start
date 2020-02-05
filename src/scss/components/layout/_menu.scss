@@ -1,0 +1,26 @@
+// App common widgets styles
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+@import "../../_stylebase.scss";
+
+.menu {
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    > li {
+      @include text($font-family_sans, 20px, $font-weight_sans_regular);
+
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+  }
+}

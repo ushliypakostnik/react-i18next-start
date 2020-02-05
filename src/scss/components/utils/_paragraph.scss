@@ -1,0 +1,17 @@
+// Paragraph conponent
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+@import "../../_stylebase.scss";
+
+.paragraph {
+  a {
+    text-decoration: underline;
+    @include link-color($color_primary, $color_primary);
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

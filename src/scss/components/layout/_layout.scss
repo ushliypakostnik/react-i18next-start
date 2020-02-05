@@ -1,0 +1,18 @@
+// App common widgets styles
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+
+@import "../../_stylebase.scss";
+
+#root,
+.layout,
+main {
+  height: 100%;
+}
+
+.layout {
+  position: relative;
+  padding-top: $header_height;
+  padding-bottom: $storage-message_height;
+}

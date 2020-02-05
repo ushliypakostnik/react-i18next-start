@@ -3,10 +3,15 @@ import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
-import {
-  LANGUAGES,
-  AUTO_LANG,
-} from '../store/constants';
+import { LANGUAGES, AUTO_LANG } from '../store/constants';
+import store from '../store/store';
+import { setLanguage } from '../store/modules/utils/actions';
+import { rememberLanguage } from '../utils/storage';
+
+const detectorOptions = {
+  order: ['navigator'],
+  lookupLocalStorage: 'language',
+};
 
 i18n
   // load translation using xhr -> see /public/locales
@@ -21,8 +26,8 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    fallbackLng: [ LANGUAGES[1].name, LANGUAGES[0].name ],
-    lng: AUTO_LANG,
+    fallbackLng: [ LANGUAGES[0].name, LANGUAGES[1].name ],
+    detection: detectorOptions,
 
     debug: false,
 
@@ -35,6 +40,23 @@ i18n
     react: {
       wait: true,
     },
+  })
+  .then(() => {
+    const { language } = i18n;
+    const l = language.substr(0, 2);
+
+    if (!AUTO_LANG) {
+      if ([ LANGUAGES[0].name, LANGUAGES[1].name ].includes(l)) {
+        store.dispatch(setLanguage(l));
+        rememberLanguage(l);
+      } else {
+        store.dispatch(setLanguage(LANGUAGES[0].name));
+        rememberLanguage(LANGUAGES[0].name);
+      }
+    } else {
+      store.dispatch(setLanguage(AUTO_LANG));
+      rememberLanguage(AUTO_LANG);
+    }
   });
 
 export default i18n;

@@ -2,9 +2,11 @@ import { INITIAL_STATE } from '../../constants';
 
 import {
   SET_LANGUAGE,
+  ACCEPT_STORAGE_MESSAGE,
+  RESIZE,
 } from './actions';
 
-const reducer1 = (state, action) => {
+const utils = (state, action) => {
   if (typeof state === 'undefined') {
     return INITIAL_STATE;
   }
@@ -14,9 +16,17 @@ const reducer1 = (state, action) => {
       return Object.assign({}, state, {
         language: action.language,
       });
+    case ACCEPT_STORAGE_MESSAGE:
+      return Object.assign({}, state, {
+        isAcceptStorageMessage: true,
+      });
+    case RESIZE:
+      return Object.assign({}, state, {
+        deviceType: action.deviceType,
+      });
     default:
       return state;
   }
 };
 
-export default reducer1;
+export default utils;
