@@ -31,12 +31,10 @@ class Layout extends Component {
   componentDidMount() {
     this.goodHeight();
     window.addEventListener('resize', () => {this.goodHeight()});
-    window.addEventListener('keydown', this.onKeyDown);
   };
 
   componentWillUnmount() {
     window.removeEventListener('resize', () => {this.goodHeight()});
-    window.removeEventListener('keydown', this.onKeyDown);
   };
 
   goodHeight() {
