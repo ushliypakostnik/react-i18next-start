@@ -10,7 +10,7 @@ import Menu from './Menu';
 
 const HEADER_CLASS = 'header';
 
-const Header = props => (
+const Header = () => (
   <header
     className={`${HEADER_CLASS}`}
     id={`${HEADER_CLASS}`}
