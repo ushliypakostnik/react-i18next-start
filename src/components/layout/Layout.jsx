@@ -10,8 +10,8 @@ import Resize from './Resize';
 import Header from './Header';
 import StorageMessage from './StorageMessage';
 import ScrollToTop from '../utils/ScrollToTop';
-import Main from '../../views/Main/Main';
-import Page404 from '../../views/Page404';
+import Main from '../views/Main/Main';
+import Page404 from '../views/Page404';
 
 import '../../scss/components/layout/_layout.scss';
 

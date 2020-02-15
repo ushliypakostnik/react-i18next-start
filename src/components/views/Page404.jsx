@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
 
-import '../scss/views/_page.scss';
+import '../../scss/views/_page.scss';
 
 const Page404 = () => {
   const { t } = useTranslation();
