@@ -1,13 +1,12 @@
 // Project functions
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
 
 /// Remove the unit of a length
 /// @param {Number} $number - Number to remove unit from
 /// @return {Number} - Unitless number
 @function unitToNumber($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
+  @if type-of($number) == "number" and not unitless($number) {
     @return $number / ($number * 0 + 1);
   }
 

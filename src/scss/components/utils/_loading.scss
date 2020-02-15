@@ -1,7 +1,6 @@
 // Loader
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////////
-//////////////////////////////////////////////////////
 
 @import "../../_stylebase.scss";
 
@@ -11,6 +10,7 @@
   align-items: center;
   @include size(100%, 100%);
 
+  // stylelint-disable declaration-block-no-duplicate-properties
   &--base {
     @include size(100%, 400px);
 
@@ -29,4 +29,5 @@
       transform: translateY(calc(var(--vh, 1vh) * -4));
     }
   }
+  // stylelint-enable declaration-block-no-duplicate-properties
 }

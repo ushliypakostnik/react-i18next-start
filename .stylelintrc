@@ -61,7 +61,7 @@
       ignoreProperties: ["$font-family_sans", "$font-family_serif"],
       "message": "Значения свойств следует указывать строчными буквами"
     }],
-    "value-list-comma-newline-after": ["never-multi-line", {
+    "value-list-comma-newline-after": ["always-multi-line", {
       "message": "Значения свойств на одной строке"
     }],
     "value-list-comma-space-after": ["always", {

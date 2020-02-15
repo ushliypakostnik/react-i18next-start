@@ -28,14 +28,16 @@ $line-height--normal: floor($line-height--computed * $font-size__coefficient--no
 $line-height--small: floor($line-height--computed * $font-size__coefficient--small); // 20px
 $line-height--xsmall: floor($line-height--computed * $font-size__coefficient--xsmall); // 18px
 
+// stylelint-disable value-keyword-case
 $font-family__sans: "Open Sans", Helvetica, Arial, sans-serif;
+// stylelint-enable value-keyword-case
 $font-weight__sans__regular: 400;
 $font-weight__sans__bold: 700;
 
 // Universal Typographic Mixin
 //////////////////////////////////////////////////////
 
-// Используем одну, только одну, Карл, универсальную примесь для всех случаев!!!!!!!!!!
+// We use one, only one, Karl, a universal admixture for all cases !!!!!!!!!!
 
 @mixin text($font-family, $font-size, $font-weight) {
   font-family: $font-family;
