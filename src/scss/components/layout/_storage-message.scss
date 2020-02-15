@@ -6,16 +6,16 @@
 @import "../../_stylebase.scss";
 
 .storage-message {
-  height: $storage-message_height;
-  color: $color_white;
-  background: $color_black;
+  height: $storage-message__height;
+  color: $colors--white;
+  background: $colors--black;
   display: flex;
   align-items: center;
   position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: $layout_modal + 100;
+  z-index: $layouts__modal + 100;
 
   .container {
     display: flex;
@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
     padding-right: $gutter * 2;
-    @include text($font-family_sans, 20px, $font-weight_sans_regular);
+    @include text($font-family__sans, 20px, $font-weight__sans__regular);
     line-height: 23px;
   }
 

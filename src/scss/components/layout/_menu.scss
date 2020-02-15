@@ -16,7 +16,7 @@
     align-items: center;
 
     > li {
-      @include text($font-family_sans, 20px, $font-weight_sans_regular);
+      @include text($font-family__sans, 20px, $font-weight__sans__regular);
 
       &:not(:last-child) {
         margin-right: 60px;

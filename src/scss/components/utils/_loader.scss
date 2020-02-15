@@ -6,9 +6,9 @@
 @import "../../_stylebase.scss";
 
 .loader {
-  @include size($loader_size_default, $loader_size_default);
+  @include size($loader__size--default, $loader__size--default);
 
   svg path {
-    fill: $color_primary;
+    fill: $colors__primary;
   }
 }

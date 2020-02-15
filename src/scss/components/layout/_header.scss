@@ -6,11 +6,11 @@
 @import "../../_stylebase.scss";
 
 .header {
-  background: $color_black;
+  background: $colors--black;
   position: fixed;
   top: 0;
-  z-index: $layout_fixed;
-  @include size(100%, $header_height);
+  z-index: $layouts__fixed;
+  @include size(100%, $header__height);
 
   .container {
     height: 100px;

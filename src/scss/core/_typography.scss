@@ -6,31 +6,31 @@
 //////////////////////////////////////////////////////
 
 // Good line-height and letter-spacing
-$line-height_base: 1.428571429;
+$line-height--base: 1.428571429;
 $normal-letter-spacing: normal;
 
 // Guide
 
-$font-size_base: 16px;
-$font-size_coefficient_large: 5;
-$font-size_coefficient_normal: 1.5;
-$font-size_coefficient_small: 1;
-$font-size_coefficient_xsmall: 0.9;
+$font-size--base: 16px;
+$font-size__coefficient--large: 5;
+$font-size__coefficient--normal: 1.5;
+$font-size__coefficient--small: 1;
+$font-size__coefficient--xsmall: 0.9;
 
-$font-size_large: round($font-size_base * $font-size_coefficient_large); // 24px
-$font-size_normal: round($font-size_base * $font-size_coefficient_normal); // 18px
-$font-size_small: round($font-size_base * $font-size_coefficient_small); // 14px
-$font-size_xsmall: round($font-size_base * $font-size_coefficient_xsmall); // 13px
+$font-size--large: round($font-size--base * $font-size__coefficient--large); // 24px
+$font-size--normal: round($font-size--base * $font-size__coefficient--normal); // 18px
+$font-size--small: round($font-size--base * $font-size__coefficient--small); // 14px
+$font-size--xsmall: round($font-size--base * $font-size__coefficient--xsmall); // 13px
 
-$line-height_computed: round($font-size_base * $line-height_base);
-$line-height_large: floor($line-height_computed * $font-size_coefficient_large); // 34px
-$line-height_normal: floor($line-height_computed * $font-size_coefficient_normal); // 26px
-$line-height_small: floor($line-height_computed * $font-size_coefficient_small); // 20px
-$line-height_xsmall: floor($line-height_computed * $font-size_coefficient_xsmall); // 18px
+$line-height--computed: round($font-size--base * $line-height--base);
+$line-height--large: floor($line-height--computed * $font-size__coefficient--large); // 34px
+$line-height--normal: floor($line-height--computed * $font-size__coefficient--normal); // 26px
+$line-height--small: floor($line-height--computed * $font-size__coefficient--small); // 20px
+$line-height--xsmall: floor($line-height--computed * $font-size__coefficient--xsmall); // 18px
 
-$font-family_sans: "Open Sans", Helvetica, Arial, sans-serif;
-$font-weight_sans_regular: 400;
-$font-weight_sans_bold: 700;
+$font-family__sans: "Open Sans", Helvetica, Arial, sans-serif;
+$font-weight__sans__regular: 400;
+$font-weight__sans__bold: 700;
 
 // Universal Typographic Mixin
 //////////////////////////////////////////////////////
@@ -43,16 +43,16 @@ $font-weight_sans_bold: 700;
   font-weight: $font-weight;
   letter-spacing: $normal-letter-spacing;
 
-  @if $font-size == $font-size_large {
-    line-height: $line-height_large;
-  } @else if $font-size == $font-size_normal {
-    line-height: $line-height_normal;
-  } @else if $font-size == $font-size_small {
-    line-height: $line-height_small;
-  } @else if $font-size == $font-size_xsmall {
-    line-height: $line-height_xsmall;
+  @if $font-size == $font-size--large {
+    line-height: $line-height--large;
+  } @else if $font-size == $font-size--normal {
+    line-height: $line-height--normal;
+  } @else if $font-size == $font-size--small {
+    line-height: $line-height--small;
+  } @else if $font-size == $font-size--xsmall {
+    line-height: $line-height--xsmall;
   } @else {
-    line-height: floor($font-size * $line-height_base);
+    line-height: floor($font-size * $line-height--base);
   }
 }
 
@@ -61,41 +61,41 @@ $font-weight_sans_bold: 700;
 
 p {
   margin-bottom: $gutter / 2;
-  @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+  @include text($font-family__sans, $font-size--small, $font-weight__sans__regular);
 }
 
 h1 {
-  @include text($font-family_sans, $font-size_large, $font-weight_sans_bold);
+  @include text($font-family__sans, $font-size--large, $font-weight__sans__bold);
 
   @include xs {
-    @include text($font-family_sans, $font-size_normal, $font-weight_sans_bold);
+    @include text($font-family__sans, $font-size--normal, $font-weight__sans__bold);
   }
 }
 
 h2 {
-  @include text($font-family_sans, $font-size_large, $font-weight_sans_regular);
+  @include text($font-family__sans, $font-size--large, $font-weight__sans__regular);
 
   @include xs {
-    @include text($font-family_sans, $font-size_normal, $font-weight_sans_regular);
+    @include text($font-family__sans, $font-size--normal, $font-weight__sans__regular);
   }
 }
 
 h3 {
-  @include text($font-family_sans, $font-size_normal, $font-weight_sans_bold);
+  @include text($font-family__sans, $font-size--normal, $font-weight__sans__bold);
 }
 
 h4 {
-  @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+  @include text($font-family__sans, $font-size--small, $font-weight__sans__regular);
 }
 
 h5 {
-  @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_bold);
+  @include text($font-family__sans, $font-size--xsmall, $font-weight__sans__bold);
 }
 
 h6 {
-  @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
+  @include text($font-family__sans, $font-size--xsmall, $font-weight__sans__regular);
 }
 
 strong {
-  font-weight: $font-weight_sans_bold;
+  font-weight: $font-weight__sans__bold;
 }

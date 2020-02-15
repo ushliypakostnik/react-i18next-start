@@ -9,7 +9,7 @@
   user-select: none;
   padding: 0;
   position: relative;
-  z-index: $layout_modal - 100;
+  z-index: $layouts__modal - 100;
   cursor: pointer;
   border: none;
   border-radius: 35px;
@@ -21,7 +21,7 @@
     position: absolute;
     top: 5px;
     left: 5px;
-    background: $color_primary;
+    background: $colors__primary;
     border-radius: 30px;
     @include size(47px, 30px);
     @include transitions(left);
@@ -41,8 +41,8 @@
 
     li {
       height: 30px;
-      color: $color_black;
-      @include text($font-family_sans, 15px, $font-weight_sans_bold);
+      color: $colors--black;
+      @include text($font-family__sans, 15px, $font-weight__sans__bold);
       line-height: 30px;
       letter-spacing: 0.06em;
 

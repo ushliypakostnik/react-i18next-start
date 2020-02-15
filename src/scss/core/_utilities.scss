@@ -8,7 +8,7 @@
 
 .fadeAndLeft {
   will-change: transform, opacity;
-  @include animations("left #{$animation_duration}", "fade #{$animation_duration}");
+  @include animations("left #{$animation-duration}", "fade #{$animation-duration}");
 }
 
 

@@ -4,9 +4,7 @@
 //////////////////////////////////////////////////////
 
 // Paths
-$image_path_root: "assets/images/";
-
-$mocks_path: "mocks/";
+$images__path--root: "assets/images/";
 
 
 // Sizes
@@ -23,51 +21,51 @@ $border-width: 2px;
 
 // Buttons
 
-$btn_border-radius: 10px;
+$buttons__border-radius: 10px;
 
-$btn_height: 70px;
+$buttons__height: 70px;
 
 
 // Inputs
 
-$input_height: 70px;
+$inputs__height: 70px;
 
 
 // Views
 //////////////////////////////////////////////////////
 
-$loader_size_default: 100px;
+$loader__size--default: 100px;
 
-$storage-message_height: 80px;
+$storage-message__height: 80px;
 
-$header_height: 100px;
+$header__height: 100px;
 
 
 // Layouts
 //////////////////////////////////////////////////////
 
-$layout_modal: 2500;
-$layout_fixed: 2000;
-$layout_popups: 1500;
-$layout_content: 1000;
+$layouts__modal: 2500;
+$layouts__fixed: 2000;
+$layouts__popups: 1500;
+$layout__content: 1000;
 
 
 // Effects
 //////////////////////////////////////////////////////
 
 $fade: 0.2;
-$fade-percent: 8%;
+$fade--percent: 8%;
 
-$shadows_coords_x: 0;
-$shadows_coords_y: 0;
-$shadows_size: 10px;
-$shadows_stretch: 0;
+$shadows__coords-x: 0;
+$shadows__coords-y: 0;
+$shadows__size: 10px;
+$shadows__stretch: 0;
 
-$transition_duration: 0.2s;
-$transition_timing-function: ease-in-out;
-$transition_delay: 0s;
+$transition-duration: 0.2s;
+$transition-timing-function: ease-in-out;
+$transition-delay: 0s;
 
-$animation_duration: $transition_duration * 3;
+$animation-duration: $transition-duration * 3;
 
 
 // Colors
@@ -75,62 +73,60 @@ $animation_duration: $transition_duration * 3;
 
 // Palette
 
-$color_white: #fff;
-$color_black: #000;
+$colors--white: #fff;
+$colors--black: #000;
 
-$color_primary: #b0b2f0;
+$colors__primary: #b0b2f0;
 
-$color_second: #d930aa;
+$colors__second: #d930aa;
 
 
 // Grays
 
-$color_gray_lighter: #fafafa;
+$colors__grays--lighter: #fafafa;
 
 
 // Text
 
-$color_text: #575757;
+$colors__text: #575757;
 
 
 // Links
 
-$color_link: $color_primary;
-$color_link-hover: darken(#44529c, $fade);
+$colors__link: $colors__primary;
+$colors__link--hover: darken(#44529c, $fade);
 
 
 // Borders and shadows
 
-$color_border: #dadada;
+$colors__border: #dadada;
 
-$color_shadows: $color_black;
+$colors__shadows: $colors--black;
 
 
 // Functional
 
-$color_placeholder: $color_border;
+$colors__placeholder: $colors__border;
 
 
 // Breackpoints and containers
 //////////////////////////////////////////////////////
 
-// Extra small screen / XS / phone
-$breackpoint_min:                 320px;
+// Minimum Supported Width
+$breackpoints__min:                 320px;
 
-$breackpoint_xs:                  359px;
+// Extra small screen / XS / phone
+$breackpoints__xs:                  359px;
 
 // Small screen / SM / tablet
-$breackpoint_sm:                  768px;
-$breackpoint_sm_min:              $breackpoint_sm;
+$breackpoints__sm:                  768px;
 
 // Medium screen / MD desktop / нетбуки типо чтоле
-$breackpoint_md:                  1025px;
-$breackpoint_md_min:              $breackpoint_md;
+$breackpoints__md:                  1025px;
 
 // Large screen / LG desktop / небольшие экраны - ноуты
-$breackpoint_lg:                  1240px;
-$breackpoint_lg_min:              $breackpoint_lg;
+$breackpoints__lg:                  1240px;
 
-$breackpoint_xs_max:              ($breackpoint_sm_min - 1);
-$breackpoint_sm_max:              ($breackpoint_md_min - 1);
-$breackpoint_md_max:              ($breackpoint_lg_min - 1);
+$breackpoints__xs_max:              ($breackpoints__sm - 1);
+$breackpoints__sm_max:              ($breackpoints__md - 1);
+$breackpoints__md_max:              ($breackpoints__lg - 1);
