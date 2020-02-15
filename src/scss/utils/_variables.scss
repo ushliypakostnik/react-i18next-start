@@ -72,8 +72,8 @@ $animation-duration: $transition-duration * 3;
 
 // Palette
 
-$colors--white: #fff;
-$colors--black: #000;
+$colors__white: #fff;
+$colors__black: #000;
 
 $colors__primary: #b0b2f0;
 
@@ -100,7 +100,7 @@ $colors__link--hover: darken(#44529c, $fade);
 
 $colors__border: #dadada;
 
-$colors__shadows: $colors--black;
+$colors__shadows: $colors__black;
 
 
 // Functional

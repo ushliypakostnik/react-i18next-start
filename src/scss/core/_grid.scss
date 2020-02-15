@@ -73,11 +73,11 @@
     min-height: 1px;
   }
 
-  &.grid-for-two {
+  &.grid--for-two {
     @include make-grid (2, 1.4%);
   }
 
-  &.grid-for-three {
+  &.grid--for-three {
     @include make-grid (3, 1.4%);
   }
 }
