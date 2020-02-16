@@ -1,7 +1,5 @@
 import React, { PureComponent } from "react";
-import { withTranslation } from 'react-i18next';
 import PropTypes from "prop-types";
-import { compose } from "redux";
 
 import withLanguage from '../hoc/withLanguage';
 
@@ -21,9 +19,4 @@ Paragraph.propTypes = {
   text: PropTypes.object.isRequired,
 };
 
-const Composed = compose(
-  withTranslation(),
-  withLanguage,
-);
-
-export default Composed(Paragraph);
+export default withLanguage(Paragraph);

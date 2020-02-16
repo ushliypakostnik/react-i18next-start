@@ -1,36 +1,33 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import { NavLink } from 'react-router-dom';
-import { withTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 import { DESIGN } from '../../store/constants';
 
 import '../../scss/components/layout/_menu.scss';
 
-class Menu extends PureComponent {
+const Menu = () => {
+  const { t } = useTranslation();
+  const views = DESIGN.VIEWS;
 
-  render() {
-    const { t } = this.props;
-    const views = DESIGN.VIEWS;
-
-    return (
-      <nav role="navigation" className="menu">
-        <ul role="menu">
-          {views.map((view, index) => {
-            return (
-              <li role="presentation" key={index}>
-                <NavLink
-                  to={view.path}
-                  role="menuitem"
-                >
-                  {t(`views.${view.name}.name`)}
-                </NavLink>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-    );
-  }
+  return (
+    <nav role="navigation" className="menu">
+      <ul role="menu">
+        {views.map((view, index) => {
+          return (
+            <li role="presentation" key={index}>
+              <NavLink
+                to={view.path}
+                role="menuitem"
+              >
+                {t(`views.${view.name}.name`)}
+              </NavLink>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
 };
 
-export default withTranslation()(Menu);
+export default Menu;
