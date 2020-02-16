@@ -1,8 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import { withTranslation } from 'react-i18next';
 import { connect } from 'react-redux';
-import { compose } from "redux";
 
 import { DESIGN } from '../../store/constants';
 
@@ -73,9 +71,4 @@ const mapStateToProps = (state) => ({
   isAcceptStorageMessage: state.rootReducer.utils.isAcceptStorageMessage,
 });
 
-const Composed = compose(
-  withTranslation(),
-  connect(mapStateToProps, null),
-);
-
-export default Composed(Layout);
+export default connect(mapStateToProps, null)(Layout);
