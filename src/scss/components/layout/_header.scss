@@ -12,7 +12,7 @@
   @include size(100%, $header__height);
 
   .container {
-    height: 100px;
+    height: $header__height;
     display: flex;
     align-items: center;
     justify-content: flex-end;

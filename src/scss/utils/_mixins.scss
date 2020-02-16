@@ -55,7 +55,7 @@
 }
 
 @mixin min {
-  @media only screen and (max-width: $breackpoints_-xs) {
+  @media only screen and (max-width: $breackpoints__xs) {
     @content;
   }
 }
