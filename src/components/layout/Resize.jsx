@@ -21,14 +21,6 @@ class Resize extends Component {
   //  this.scrollbarWidth = ScreenHelper.getScrollbarWidth();
   //}
 
-  render() {
-    return (
-      <div className="resize">
-        <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
-      </div>
-    );
-  }
-
   getDeviceType = () => {
     if (ScreenHelper.isDesktop()) {
       return DESIGN.DEVICES_TYPES[0];
@@ -37,11 +29,19 @@ class Resize extends Component {
     } else {
       return DESIGN.DEVICES_TYPES[2];
     }
-  }
+  };
 
   onResize = () => {
     this.props.resize(this.getDeviceType());
-  }
+  };
+
+  render() {
+    return (
+      <div className="resize">
+        <ReactResizeDetector handleWidth handleHeight onResize={this.onResize} />
+      </div>
+    );
+  };
 }
 
 const mapDispatchToProps = (dispatch) => ({
