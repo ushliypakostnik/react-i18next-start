@@ -74,11 +74,11 @@
   }
 
   &.grid--for-two {
-    @include make-grid (2, 1.4%);
+    @include make-grid(2, 1.4%);
   }
 
   &.grid--for-three {
-    @include make-grid (3, 1.4%);
+    @include make-grid(3, 1.4%);
   }
 }
 
