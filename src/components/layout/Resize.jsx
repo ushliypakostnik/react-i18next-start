@@ -45,7 +45,7 @@ class Resize extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  resize: (deviceType) => dispatch(resize(deviceType))
+  resize: (deviceType) => dispatch(resize(deviceType)),
 });
 
 export default connect(null, mapDispatchToProps)(Resize);
