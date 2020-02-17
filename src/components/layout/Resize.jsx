@@ -42,7 +42,7 @@ class Resize extends Component {
       </div>
     );
   };
-}
+};
 
 const mapDispatchToProps = (dispatch) => ({
   resize: (deviceType) => dispatch(resize(deviceType)),
