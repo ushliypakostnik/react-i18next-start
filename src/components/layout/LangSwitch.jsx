@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { compose } from "redux";
 
-import { rememberLanguage } from '../../utils/storage';
 import { LANGUAGES } from '../../store/constants';
 import { setLanguage } from '../../store/modules/utils/actions';
 

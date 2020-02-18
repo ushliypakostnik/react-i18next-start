@@ -6,7 +6,6 @@ import { initReactI18next } from 'react-i18next';
 import { LANGUAGES, AUTO_LANG } from '../store/constants';
 import store from '../store/store';
 import { setLanguage } from '../store/modules/utils/actions';
-import { rememberLanguage } from '../utils/storage';
 
 const detectorOptions = {
   order: ['navigator'],
