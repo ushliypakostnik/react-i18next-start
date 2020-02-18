@@ -1,3 +1,5 @@
+import { rememberLanguage } from '../../../utils/storage';
+
 // Actions Types
 
 export const SET_LANGUAGE = 'SET_LANGUAGE';
@@ -8,10 +10,15 @@ export const RESIZE = 'RESIZE';
 // Action Creators
 ////////////////////////////////////////////////////////////
 
-export const setLanguage = (language) => ({
-  type: SET_LANGUAGE,
-  language,
-});
+export const setLanguage = (language) => {
+  rememberLanguage(language);
+
+  return {
+    type: SET_LANGUAGE,
+    language,
+  };
+};
+
 
 export const acceptStorageMessage = () => ({
   type: ACCEPT_STORAGE_MESSAGE,

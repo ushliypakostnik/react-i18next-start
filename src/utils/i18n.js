@@ -48,14 +48,11 @@ i18n
     if (!AUTO_LANG) {
       if ([ LANGUAGES[0].name, LANGUAGES[1].name ].includes(l)) {
         store.dispatch(setLanguage(l));
-        rememberLanguage(l);
       } else {
         store.dispatch(setLanguage(LANGUAGES[0].name));
-        rememberLanguage(LANGUAGES[0].name);
       }
     } else {
       store.dispatch(setLanguage(AUTO_LANG));
-      rememberLanguage(AUTO_LANG);
     }
   });
 

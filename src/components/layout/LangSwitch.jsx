@@ -40,7 +40,6 @@ class LangSwitch extends PureComponent {
     const language = this.getButtonState() ? LANGUAGES[0].name : LANGUAGES[1].name;
 
     this.props.setLanguage(language);
-    rememberLanguage(language);
   };
 
   render() {
