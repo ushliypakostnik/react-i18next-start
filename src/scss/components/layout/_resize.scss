@@ -4,21 +4,24 @@
 
 @import "../../_stylebase.scss";
 
-.resize {
-  position: fixed;
+%common {
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
-  z-index: -1;
   @include size(100%, 100%);
+}
+
+.resize {
+  position: fixed;
+  z-index: -1;
+
+  &,
+  > div {
+    @extend %common;
+  }
 
   > div {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    @include size(100%, 100%);
   }
 }
