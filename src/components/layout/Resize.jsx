@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { connect } from 'react-redux';
 
 import ReactResizeDetector from 'react-resize-detector';
@@ -11,7 +11,7 @@ import ScreenHelper from '../../utils/_screen-helper';
 
 import '../../scss/components/layout/_resize.scss';
 
-class Resize extends Component {
+class Resize extends PureComponent {
   //constructor(props) {
   //  super(props);
   //  this.scrollbarWidth = null;
