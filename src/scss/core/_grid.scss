@@ -66,19 +66,19 @@
 }
 
 // Inline-blocks grid (fro using in grid degradation, for example)
-.grid {
+.grid-old {
   > div {
     display: inline-block;
     vertical-align: top;
     min-height: 1px;
   }
 
-  &.grid--for-two {
-    @include make-grid(2, 1.4%);
+  &--2 {
+    @include make-grid(2, 5%);
   }
 
-  &.grid--for-three {
-    @include make-grid(3, 1.4%);
+  &--3 {
+    @include make-grid(3, 5%);
   }
 }
 
